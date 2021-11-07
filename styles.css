@@ -7,6 +7,12 @@
     background-size: cover;
 }
 
+@media only screen and (max-width: 600px) { /* maximun screen width allowed in order to be applied */
+    #ascii-text {
+        display: none;
+    }
+}
+
 body {
     margin-left: 3%;
     margin-right: 3%;
