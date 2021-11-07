@@ -7,12 +7,6 @@
     background-size: cover;
 }
 
-@media only screen and (max-width: 600px) { /* maximun screen width allowed in order to be applied */
-    #ascii-text {
-        display: none;
-    }
-}
-
 body {
     margin-left: 3%;
     margin-right: 3%;
@@ -142,7 +136,7 @@ div > span {
 .list-pic:hover {
     animation: shake 0.7s;
     animation-iteration-count: infinite;
-  }
+}
   
 @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
@@ -188,4 +182,53 @@ a:hover {
     100% {
         transform: scale(1, 1);
     }
+}
+
+@media only screen and (max-width: 1400px) { /* applied for small screen */
+    #ascii-text {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1140px) { /* applied for mobile screen */
+    #img-container { 
+        flex-direction: column;
+    }
+    .pic {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+    .pic:hover {
+        width: 240px;
+        height: 240px;
+        border: 3px inset rgb(30, 138, 93);
+    }
+
+    td:nth-child(1) {
+        width: 50px;
+    }
+
+    #grid-container {
+        color: #85144b;
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #F3F1F5;
+        padding: 10px;
+        margin: 2% 20%;
+        box-shadow: 5px 10px 18px #888888;
+        border-radius: 8px;
+    }
+
+    #likes-list { grid-area: 1 / 1 / 2 / 1; }
+    #hates-list { grid-area: 2 / 1 / 3 / 1; }
+    .list-pic { 
+        grid-area: 3 / 1 / 4 / 1; 
+        width: 180px;
+        height: 200px;
+        margin: auto;
+    }
+
+
 }
