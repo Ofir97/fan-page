@@ -191,6 +191,9 @@ a:hover {
 }
 
 @media only screen and (max-width: 1140px) { /* applied for mobile screen */
+    body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
     #img-container { 
         flex-direction: column;
     }
@@ -212,6 +215,7 @@ a:hover {
     #grid-container {
         color: #85144b;
         display: grid;
+        justify-content: center;
         flex-direction: column;
         grid-template-columns: repeat(3, 1fr);
         background-color: #F3F1F5;
@@ -227,8 +231,8 @@ a:hover {
         grid-area: 3 / 1 / 4 / 1; 
         width: 180px;
         height: 200px;
-        margin: auto;
     }
+
 
 
 }
